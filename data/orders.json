@@ -1,0 +1,74 @@
+[
+    {
+        "id_pesanan": "ORD-6a06dbd710731",
+        "email": "mukti@gmail.com",
+        "alamat": "ngawi",
+        "items": {
+            "PRD-001": "1",
+            "PRD-002": "1"
+        },
+        "total_harga_barang": 400000,
+        "diskon": 0,
+        "ongkos_kirim": 20000,
+        "total_bayar": 420000,
+        "status": "Menunggu Pembayaran",
+        "tanggal": "2026-05-15 10:39:51"
+    },
+    {
+        "id_pesanan": "ORD-6a0858033b901",
+        "email": "mukti@gmail.com",
+        "alamat": "Karangjati",
+        "items": {
+            "PRD-001": "1"
+        },
+        "total_harga_barang": 150000,
+        "diskon": 0,
+        "ongkos_kirim": 20000,
+        "total_bayar": 170000,
+        "status": "Menunggu Pembayaran",
+        "tanggal": "2026-05-16 13:41:55"
+    },
+    {
+        "id_pesanan": "ORD-6a08583357f7a",
+        "email": "mukti@gmail.com",
+        "alamat": "Karangjati",
+        "items": {
+            "PRD-001": "2",
+            "PRD-002": "1"
+        },
+        "total_harga_barang": 550000,
+        "diskon": 0,
+        "ongkos_kirim": 0,
+        "total_bayar": 550000,
+        "status": "Diproses",
+        "tanggal": "2026-05-16 13:42:43"
+    },
+    {
+        "id_pesanan": "ORD-6a08596cbf53b",
+        "email": "mukti@gmail.com",
+        "alamat": "Samben",
+        "items": {
+            "PRD-06": "2"
+        },
+        "total_harga_barang": 330,
+        "diskon": 0,
+        "ongkos_kirim": 20000,
+        "total_bayar": 20330,
+        "status": "Menunggu Pembayaran",
+        "tanggal": "2026-05-16 13:47:56"
+    },
+    {
+        "id_pesanan": "ORD-6a1979723db61",
+        "email": "mukti@gmail.com",
+        "alamat": "Ngawi",
+        "items": {
+            "PRD-001": "2"
+        },
+        "total_harga_barang": 300000,
+        "diskon": 0,
+        "ongkos_kirim": 20000,
+        "total_bayar": 320000,
+        "status": "Dikirim",
+        "tanggal": "2026-05-29 13:33:06"
+    }
+]

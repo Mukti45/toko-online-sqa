@@ -1,0 +1,14 @@
+[
+    {
+        "nama": "test",
+        "email": "test@mail.com",
+        "password": "$2y$12$TVNtOBx8xd26kdG\/8soZYOn6osE0hYChf8zFpu4TIztmFYnTZXck6",
+        "role": "admin"
+    },
+    {
+        "nama": "mukti",
+        "email": "mukti@gmail.com",
+        "password": "$2y$10$Pixpscv7o9irS3s.2WLa4..\/cYQm6BlC3MXtMngdAs5\/UHpCCACaK",
+        "role": "pelanggan"
+    }
+]
