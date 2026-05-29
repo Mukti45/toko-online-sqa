@@ -1,0 +1,16 @@
+name: SQA CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+    - name: Install Dependencies
+      run: composer install --prefer-dist --no-progress
+    - name: Run Automated Tests
+      run: vendor/bin/phpunit tests/
