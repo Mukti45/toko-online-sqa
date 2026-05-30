@@ -1,4 +1,4 @@
-name: SQA CI Pipeline
+name: SQA CI & CT Pipeline
 
 on: [push, pull_request]
 
@@ -6,12 +6,24 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: shivammathur/setup-php@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Setup PHP Environment
+      uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-        coverage: none
-    - name: Install Dependencies
+        coverage: xdebug
+    - name: Install PHP Dependencies
       run: composer install --prefer-dist --no-progress
-    - name: Run Automated Tests
-      run: php vendor/bin/phpunit tests/
+    - name: Run PHPUnit & Quality Metrics
+      run: vendor/bin/phpunit tests/ --coverage-text
+    - name: Setup Node.js for Cypress
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+    - name: Install NPM Dependencies
+      run: npm install
+    - name: Start PHP Server in Background
+      run: php -S localhost:8000 &
+    - name: Run Cypress E2E Tests
+      uses: cypress-io/github-action@v6
