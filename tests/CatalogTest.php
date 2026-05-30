@@ -22,7 +22,7 @@ class CatalogTest extends TestCase
     public function testSearchProductFound()
     {
         $result = $this->katalog->searchProduct("Kemeja");
-        $this->assertCount(1, $result);
+        $this->assertCount(99, $result);
     }
 
     // UT-02: Pencarian dengan keyword kosong
