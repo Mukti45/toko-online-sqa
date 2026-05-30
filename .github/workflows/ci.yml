@@ -8,22 +8,32 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+
     - name: Setup PHP Environment
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
         coverage: xdebug
+
     - name: Install PHP Dependencies
       run: composer install --prefer-dist --no-progress
+
     - name: Run PHPUnit & Quality Metrics
-      run: vendor/bin/phpunit tests/ --coverage-text
+      run: php vendor/bin/phpunit tests/ --coverage-text
+
     - name: Setup Node.js for Cypress
       uses: actions/setup-node@v4
       with:
         node-version: 24
+
     - name: Install NPM Dependencies
       run: npm install
+
     - name: Start PHP Server in Background
       run: php -S localhost:8000 &
+
     - name: Run Cypress E2E Tests
       uses: cypress-io/github-action@v6
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
